@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+}
+p{
+    font-family: 'Roboto Slab', serif;
+    line-height: 1.4;
+    margin: 0;
+    padding: 10px 10px;
+}
+li {
+    font-family: 'Roboto Slab', serif;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    font-family: 'Roboto Mono', monospace;
+}
+h1, h2 {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 10px 10px 0px 10px;
+}
+.highlight {
+    background-color: #333D79FF;
+    color: #F0F6F7FF;
+}
+
+/* Header
+---------------------------*/
+header img {
+    padding: 0;
+}
+header {
+    background-color: #A89C94FF;
+    color: #F0F6F7FF;
+}
+header li, nav li {
+    list-style: none;
+}
+header li:not(:last-child), nav li:not(:last-child) {
+    margin-bottom: 10px;
+}
+header li:before, nav li::before{
+    content: "\27B5";
+    font-size: 20px;
+    margin-right: 10px;
+}
+header ul {
+    margin: 0;
+    padding: 10px 10px;
+}
+
+/* Navigation
+---------------------------*/
+nav {
+    background-color: #F0F6F7FF;
+    padding: 20px 0px;
+}
+nav a {
+    color: #333D79FF;
+    font-family: 'Roboto Mono', monospace;
+}
+nav ul {
+    margin: 0;
+    padding: 10px 10px;
+}
+
+/* Sections
+---------------------------*/
+section ul {
+    margin: 0;
+    padding: 10px 30px;
+}
+section li:not(:last-child) {
+    margin-bottom: 10px;
+}
+ol img {
+    padding: 20px 0;
+}
+
+
+@media screen and (min-width: 640px) {
+    html {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (min-width: 960px) {
+    h1 {
+        padding-top: 20px;
+    }
+    header ul {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 40px;
+    }
+    header li:before {
+        display: none;
+    }
+    header li {
+        color: #F0F6F7FF;
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    nav li:before {
+        display: none;
+    }
+    nav a {
+        color: #F0F6F7FF;
+    }
+    #nutrition ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        background-color: #333D79FF;
+        color: #F0F6F7FF;
+        padding: 0;
+    }
+    main {
+        display: grid;
+	    grid-template-columns: 1fr 2fr;
+	    grid-template-areas: "sidebar navigation" 
+                             "sidebar story"
+                             "sidebar content";
+    }
+    nav {
+        background-color: #333D79FF;
+        grid-area: navigation;
+    }
+    .sidebar {
+        background-color: #F0F6F7FF;
+        grid-area: sidebar;
+        line-height: 80px;
+    }
+    #story {
+        grid-area: story;
+        padding-top: 20px;
+    }
+    .content {
+        grid-area: content;
+        padding-top: 20px;
+    }
+    #story span, .content span {
+       background-color: white;
+       color: black;
+    }
+    .sidebar span {
+        background-color:#F0F6F7FF;
+        color: black;
+     }
+    .sidebar li:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
